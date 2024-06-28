@@ -1,0 +1,33 @@
+## experiment setting
+date: "0606"
+experiment_name: bert_p=0.5_pos=sentence
+
+
+## problem setting
+mode: "BP" # MBP, P
+entity_type: 
+  - "Company"
+  - "Person"
+num_labels: 5
+
+
+## preprocessing
+threshold: 0.5
+
+## data
+train_data: /train_dataset
+valid_data: /valid_dataset
+test_data: /test_dataset
+
+
+## training
+pretrained_model: hfl/chinese-roberta-wwm-ext
+do_training: True
+max_len: 512
+batch_size: 32
+n_epochs: 5
+lr: 1e-5
+
+
+# predicting
+do_prediction: True
