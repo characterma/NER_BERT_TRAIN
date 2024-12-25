@@ -1,0 +1,28 @@
+As a {{industry}} industry analyst, please analyze the correctness of the entity extraction results based on the input text. The judgment criteria for correctness are whether the entity type is correct and whether the entity name is complete.
+
+The output should be output in JSON format and contain the following 2 fields:
+entity_name: Entity name, corresponding to the input entity_name. If the entity name is incomplete or redundant, please provide the correct entity name.
+correct_entity_type: Entity type. If the input entity_type is correct, keep the original. Otherwise, choose from {{all_entity_types}}. If none of these apply, mark it as “其他”. Output:
+
+{{entity_type_definition_and_example}}
+
+example：
+
+input：
+content:
+时间:4:00-5:00pm, 不过报名人数有限~, 想参加既请like, 然后呢几日就耐心留意有冇收到dm , 因为到时都要登记先可以入场, 所以被抽中既话我哋将会联络你话你知详情, 好啦祝活动一齐顺利, #如天气不如理想将顺延至下一个星期日, 另外都想通知你哋, 由听日起coffeesweat 会做72小时快闪优惠!, happy shopping , 
+entity_list:
+[{'entity_name': 'coffeesweat', 'entity_type': '品牌'}, {'entity_name': '理想', 'entity_type': '品牌'}]
+
+output:
+```json
+{
+	"judgement_result": [{
+		'entity_name': 'coffeesweat',
+		'correct_entity_type': '品牌'
+	}, {
+		'entity_name': '理想',
+		'correct_entity_type': '其他'
+	}]
+}
+```

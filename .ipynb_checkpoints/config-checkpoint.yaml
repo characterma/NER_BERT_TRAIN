@@ -1,0 +1,87 @@
+## experiment setting
+date: "1016"
+industry: "咖啡茶饮"
+tags: "咖啡茶饮实体验证及ner模型训练"
+output_dir_path: output
+
+## 实体类型相关信息
+mode: "BP" # MBP, P
+entity_type: 
+  - "品牌"
+  - "产品"
+num_labels: 5
+
+data:
+  format: excel # excel / csv/ pickle  / json
+  # raw_data_path: data/raw_data/doc_entity_extraction_expand_test.xlsx  # 输入的实体打标的数据路径
+  # vkg_entity_data_path: data/raw_data/correct_entity.xlsx
+  
+  raw_data_path: data/coffee_tea/beauty_doc_entity_extraction_expand.xlsx  # 输入的实体打标的数据路径,输入数据的id列必须是“doc_id”,标题必须是“headline”， 内容必须是“content”
+  vkg_entity_data_path: data/coffee_tea/correct_entity.xlsx
+  business_entity_dict_path: data/coffee_tea/business_entity_dict.xlsx # 必须存在entity、entity_type两列
+
+model:
+  device: "cuda:0"
+  pretrained_model_name: hfl/chinese-roberta-wwm-ext
+  pretrain_model_dir: pretrain_model
+  max_len: 512
+  batch_size: 32
+  n_epochs: 3
+  lr: 1e-5
+  do_training: True
+  do_prediction: False
+
+stages:
+  # - data_preprocess
+  # - product_type_word_evaluation
+  # - entity_word_eval
+  # - sentence_include_entity_eval
+  # - generate_dataset
+  # - train_model
+  - model_evaluate
+  
+data_preprocess:
+  processed_file_name: processed_data.xlsx
+  
+product_type_word_evaluation:
+  product_type_name: "品类"
+  template_code: 1231
+  product_type_word_evaluation_result: product_type_word_evaluation_result.xlsx
+  
+entity_word_eval:
+  prompt_path: src/prompt/entity_eval_prompt1.txt
+  entity_word_eval_example: data/raw_data/entity_word_eval_example.txt  # 实体验证提供的样例
+  template_code: 1229
+  first_entity_eval_result_file: first_entity_eval_result.xlsx
+  
+sentence_include_entity_eval:
+  split_content_max_length: 300
+  # template_code: 1190
+  template_code: 1248
+  filter_correct_entity_condition: "keyword_redundant=='no' and entity_type_correct=='yes'" # 这是pandas eval或者query方法的条件过滤的语法，将实体验证后的筛选正确实体的条件配置在配置文件中方便调整
+  entity_type_definition_and_example_file_path: data/coffee_tea/coffee_tea_definition_and_example.csv
+  few_shot_file_path: data/coffee_tea/sentence_include_entity_eval_few_shot.txt
+  second_entity_eval_result_file: second_entity_eval_result.xlsx
+  
+generate_dataset:
+  threshold: 0.5
+  entities_is_null_number: 10000
+  train_data: train_dataset
+  valid_data: valid_dataset
+  test_data: test_dataset
+  test_add_keyword_data: test_add_keyword_dataset
+  
+train_model:
+  save_model_dir: model
+  model_name: model.pth
+  test_data_predict_file: test_no_add_keyword_data_predict_result.pkl
+
+model_evaluate:
+  test_no_add_keyword_data_predict_file: test_no_add_keyword_data_predict_result.xlsx
+  test_add_keyword_data_predict_file: test_add_keyword_data_predict_result.xlsx
+
+
+  
+
+
+

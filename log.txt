@@ -1,0 +1,38 @@
+2024-11-29 17:22:58 PyTorch version 2.3.0 available.
+2024-11-29 17:22:58 TensorFlow version 2.13.1 available.
+2024-11-29 17:23:00 Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2024-11-29 17:23:04 handle_msg[ed79b72c-39bf-49a1-b67d-dd560c62c54e]({'header': {'date': datetime.datetime(2024, 11, 29, 9, 22, 53, 414000, tzinfo=tzutc()), 'msg_id': '74ca43a0-a90b-483a-805a-cf319a6a7abf', 'msg_type': 'comm_msg', 'session': '3a504375-a0ee-4025-bf04-67df1c55f3d0', 'username': '', 'version': '5.2'}, 'msg_id': '74ca43a0-a90b-483a-805a-cf319a6a7abf', 'msg_type': 'comm_msg', 'parent_header': {}, 'metadata': {}, 'content': {'comm_id': 'ed79b72c-39bf-49a1-b67d-dd560c62c54e', 'data': {'method': 'request_states'}}, 'buffers': []})
+2024-11-29 17:23:39 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/core/frame.py
+2024-11-29 17:23:39 pickle loaded: /opt/conda/lib/python3.8/site-packages/jedi/third_party/typeshed/stdlib/3/builtins.pyi
+2024-11-29 17:23:39 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/__init__.py
+2024-11-29 17:23:39 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/core/__init__.py
+2024-11-29 17:23:39 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/core/generic.py
+2024-11-29 17:23:39 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/core/base.py
+2024-11-29 17:23:39 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/core/accessor.py
+2024-11-29 17:23:40 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/core/indexing.py
+2024-11-29 17:23:40 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/core/arraylike.py
+2024-11-29 17:23:40 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/_typing.py
+2024-11-29 17:23:40 pickle loaded: /opt/conda/lib/python3.8/typing.py
+2024-11-29 17:23:40 pickle loaded: /opt/conda/lib/python3.8/site-packages/jedi/third_party/typeshed/stdlib/3/typing.pyi
+2024-11-29 17:23:40 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/core/series.py
+2024-11-29 17:23:40 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/core/common.py
+2024-11-29 17:23:40 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/_libs/__init__.py
+2024-11-29 17:23:40 pickle loaded: /opt/conda/lib/python3.8/site-packages/pandas/_libs/lib.pyi
+2024-11-29 17:23:44 diff parser start
+2024-11-29 17:23:44 line_lengths old: 1; new: 1
+2024-11-29 17:23:44 -> code[replace] old[1:1] new[1:1]
+2024-11-29 17:23:44 parse_part from 1 to 1 (to 0 in part parser)
+2024-11-29 17:23:44 diff parser end
+2024-11-29 17:25:44 response result is except
+2024-11-29 17:26:24 response result is except
+2024-11-29 17:52:03 diff parser start
+2024-11-29 17:52:03 line_lengths old: 1; new: 1
+2024-11-29 17:52:03 -> code[replace] old[1:1] new[1:1]
+2024-11-29 17:52:03 parse_part from 1 to 1 (to 0 in part parser)
+2024-11-29 17:52:03 diff parser end
+2024-11-29 18:09:06 handle_msg[58c6f90e-fd21-4514-bebd-7952bdd45ad2]({'header': {'date': datetime.datetime(2024, 11, 29, 10, 9, 5, 955000, tzinfo=tzutc()), 'msg_id': 'f553c3b8-a717-4337-94bb-373aa5a0b93d', 'msg_type': 'comm_msg', 'session': '3a504375-a0ee-4025-bf04-67df1c55f3d0', 'username': '', 'version': '5.2'}, 'msg_id': 'f553c3b8-a717-4337-94bb-373aa5a0b93d', 'msg_type': 'comm_msg', 'parent_header': {}, 'metadata': {}, 'content': {'comm_id': '58c6f90e-fd21-4514-bebd-7952bdd45ad2', 'data': {'method': 'request_states'}}, 'buffers': []})
+2024-11-29 18:09:06 handle_close[58c6f90e-fd21-4514-bebd-7952bdd45ad2]({'header': {'date': datetime.datetime(2024, 11, 29, 10, 9, 6, 37000, tzinfo=tzutc()), 'msg_id': '85d5db58-88b4-4e9f-baeb-76f3b6364c52', 'msg_type': 'comm_close', 'session': '3a504375-a0ee-4025-bf04-67df1c55f3d0', 'username': '', 'version': '5.2'}, 'msg_id': '85d5db58-88b4-4e9f-baeb-76f3b6364c52', 'msg_type': 'comm_close', 'parent_header': {}, 'metadata': {}, 'content': {'comm_id': '58c6f90e-fd21-4514-bebd-7952bdd45ad2', 'data': {}}, 'buffers': []})
+2024-11-29 18:22:58 handle_msg[1127273b-d101-4c91-b94b-1557a97e0f33]({'header': {'date': datetime.datetime(2024, 11, 29, 10, 22, 58, 281000, tzinfo=tzutc()), 'msg_id': '61e9a780-bb17-4ba5-888f-d8c55d3f505c', 'msg_type': 'comm_msg', 'session': '3a504375-a0ee-4025-bf04-67df1c55f3d0', 'username': '', 'version': '5.2'}, 'msg_id': '61e9a780-bb17-4ba5-888f-d8c55d3f505c', 'msg_type': 'comm_msg', 'parent_header': {}, 'metadata': {}, 'content': {'comm_id': '1127273b-d101-4c91-b94b-1557a97e0f33', 'data': {'method': 'request_states'}}, 'buffers': []})
+2024-11-29 18:22:58 handle_close[1127273b-d101-4c91-b94b-1557a97e0f33]({'header': {'date': datetime.datetime(2024, 11, 29, 10, 22, 58, 371000, tzinfo=tzutc()), 'msg_id': '029512de-924a-45b8-98cb-f177b59d7b7a', 'msg_type': 'comm_close', 'session': '3a504375-a0ee-4025-bf04-67df1c55f3d0', 'username': '', 'version': '5.2'}, 'msg_id': '029512de-924a-45b8-98cb-f177b59d7b7a', 'msg_type': 'comm_close', 'parent_header': {}, 'metadata': {}, 'content': {'comm_id': '1127273b-d101-4c91-b94b-1557a97e0f33', 'data': {}}, 'buffers': []})
+2024-12-02 11:34:19 handle_msg[64cc196c-58fd-4298-bb41-3c9022a23920]({'header': {'date': datetime.datetime(2024, 12, 2, 3, 34, 19, 418000, tzinfo=tzutc()), 'msg_id': 'e8b3e5fb-18d7-433d-a316-f530abcceb5f', 'msg_type': 'comm_msg', 'session': '3a504375-a0ee-4025-bf04-67df1c55f3d0', 'username': '', 'version': '5.2'}, 'msg_id': 'e8b3e5fb-18d7-433d-a316-f530abcceb5f', 'msg_type': 'comm_msg', 'parent_header': {}, 'metadata': {}, 'content': {'comm_id': '64cc196c-58fd-4298-bb41-3c9022a23920', 'data': {'method': 'request_states'}}, 'buffers': []})
+2024-12-02 11:34:19 handle_close[64cc196c-58fd-4298-bb41-3c9022a23920]({'header': {'date': datetime.datetime(2024, 12, 2, 3, 34, 19, 524000, tzinfo=tzutc()), 'msg_id': 'af925670-2f2d-496f-a7ef-1c9f4059f8eb', 'msg_type': 'comm_close', 'session': '3a504375-a0ee-4025-bf04-67df1c55f3d0', 'username': '', 'version': '5.2'}, 'msg_id': 'af925670-2f2d-496f-a7ef-1c9f4059f8eb', 'msg_type': 'comm_close', 'parent_header': {}, 'metadata': {}, 'content': {'comm_id': '64cc196c-58fd-4298-bb41-3c9022a23920', 'data': {}}, 'buffers': []})

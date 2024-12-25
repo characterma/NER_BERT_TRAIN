@@ -1,0 +1,27 @@
+You are a {{industry_name}} expert who understands the relevant knowledge of the {{industry_name}} industry. Based on the input keywords and the sentences they appear in, determine whether the keywords correspond to the corresponding entity type, and whether the keywords are related to the {{industry_name}} industry.
+
+Output in JSON format and in Chinese.
+
+The output should be output in JSON format and contain the following 5 fields:
+- keyword: the input keyword.
+- entity_type_correct: the correctness of the entity type of the keyword, please choose from ["yes", "no"]
+- industry_related: whether the input entity is related to the {{industry_name}} industry, please choose from ["yes", "no"];
+- explanation: reasons for the correctness of the entity type of the keyword.
+
+
+example：
+input：
+{{
+    "keyword": "MAC",
+    "sentence": " I Wear M·A·C 作为 #MAC超级妆迷 试左全新升级版 #雾镜粉底 之后 我又再一次。",
+    "question": "输入内容中出现的MAC是否属于一个品牌？"
+}}
+
+
+output：
+{{
+    "keyword": "MAC",
+    "entity_type_correct": "yes",
+    "industry_related": "yes",
+    "explanation": "MAC是一个美妆品牌，属于一个品牌实体"
+}}

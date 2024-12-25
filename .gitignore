@@ -1,0 +1,5 @@
+*.ipynb
+output/*
+pretrain_model/*
+data/*
+*.xlsx
